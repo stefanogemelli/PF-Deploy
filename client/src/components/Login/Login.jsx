@@ -91,7 +91,7 @@ function Login() {
 
   const handleClickGoogle = () => {
     // window.location.href = "https://henry-pf-production-f816.up.railway.app/auth";
-    window.location.href = "http://localhost:3001/auth";
+    window.location.href = import.meta.env.VITE_BASE_URL + "/auth";
   };
 
   const handleSubmitRegister = async (e) => {
@@ -216,10 +216,7 @@ function Login() {
           className="absolute top-[45%] flex aspect-[2/1] w-[450px] max-w-[90%] translate-y-[-50%] flex-col items-center justify-center rounded-lg bg-russianviolet"
         >
           <h2 className="mb-8 text-xl text-white">RECUPERAR CONTRASEÑA</h2>
-          <span
-            onClick={handleShowModal}
-            className="absolute top-2 right-2 self-end"
-          >
+          <span onClick={handleShowModal} className="absolute top-2 right-2 self-end">
             <img
               src={close}
               alt="Cerrar Modal"
@@ -276,9 +273,7 @@ function Login() {
                 />
               </div>
 
-              <button className="tracking-wide  shadow-md shadow-black">
-                Ingresar
-              </button>
+              <button className="tracking-wide  shadow-md shadow-black">Ingresar</button>
               <button
                 type="button"
                 onClick={handleShowModal}
@@ -315,9 +310,7 @@ function Login() {
                 required={true}
               />
               {errors.user && (
-                <span className="ml-1 -mt-3 text-sm tracking-wide text-red-700">
-                  {errors.user}
-                </span>
+                <span className="ml-1 -mt-3 text-sm tracking-wide text-red-700">{errors.user}</span>
               )}
               <input
                 onChange={handleChange}
@@ -330,9 +323,7 @@ function Login() {
                 required={true}
               />
               {errors.name && (
-                <span className="ml-1 -mt-3 text-sm tracking-wide text-red-700">
-                  {errors.name}
-                </span>
+                <span className="ml-1 -mt-3 text-sm tracking-wide text-red-700">{errors.name}</span>
               )}
               <input
                 onChange={handleChange}
@@ -360,9 +351,7 @@ function Login() {
                 autoComplete="off"
               />
               {errors.mail && (
-                <span className="ml-1 -mt-3 text-sm tracking-wide text-red-700">
-                  {errors.mail}
-                </span>
+                <span className="ml-1 -mt-3 text-sm tracking-wide text-red-700">{errors.mail}</span>
               )}
               <div className=" relative flex w-full justify-center">
                 <input
