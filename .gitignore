@@ -135,5 +135,5 @@ dist-ssr
 *.sw?
 
 
-api/index.js
-client/main.jsx
+# api/index.js
+# client/main.jsx
