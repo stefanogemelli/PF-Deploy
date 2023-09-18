@@ -90,6 +90,7 @@ function Login() {
   };
 
   const handleClickGoogle = () => {
+    console.log(import.meta.env.VITE_BASE_URL);
     // window.location.href = "https://henry-pf-production-f816.up.railway.app/auth";
     window.location.href = import.meta.env.VITE_BASE_URL + "/auth";
   };
